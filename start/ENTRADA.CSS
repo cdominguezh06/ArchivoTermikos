@@ -1,0 +1,53 @@
+
+body{
+    
+    background-repeat: no-repeat;
+    background-image: url("fondoentrada.jpg");
+    background-size: 1400px 690px;
+    scroll-behavior: smooth;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+
+
+ 
+ 
+}
+
+.flecha-flotante {
+    position: fixed;
+    bottom: 10px;
+    top: 0px;
+    right: 0px;
+    font-size: 80px;
+    background-color: #3498db00;
+    color: #fff;
+    padding: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-bottom: 50px;
+    transition: background-color 0.3s, transform 0.3s;
+   
+  }
+  
+  .flecha-flotante:hover {
+    background-color: #297fb900;
+  }
+  
+  .flecha-movimiento {
+    animation: moverArribaAbajo 1s infinite alternate; /* Animación para el movimiento */
+  }
+  
+  @keyframes moverArribaAbajo {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+  .empezarAqui{
+    color: #fff;
+    font-size: 30px;
+    
+  }

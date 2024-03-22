@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../examen"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "MAIN"
+	}
+}

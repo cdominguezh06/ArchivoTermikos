@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanoticias</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css"/>
+    <link rel="shortcut icon" href="coche.png">
+</head>
+<body>
+    <h1><div class="nano">NANO</div>TICIAS</h1>
+    <div class="container">
+        <div class="c1">
+            
+                <article>
+                    <h2>Así quedó Checo Pérez en el Gran Premio de Abu Dhabi ¿en qué posición finalizó?</h2>
+                    <p>Sergio Pérez se quedó a las puertas del podio del Gran Premio de Abu Dhabi por una quisquilllosa penalización de los comisarios. En pista, ‘Checo’ remontó del noveno al segundo lugar, pero acabó cuarto en la carrera por la sanción de cinco segundos que recibió por tocarse con Lando Norris.</p>
+                    <img class="checo" src="checo.jpg" tittle="checo" alt="Checo Pérez">
+                </article>
+            
+                <article>
+                <h2>¿Antonio Lobato se va de la Fórmula 1? El mensaje del presentador que ha hecho saltar todas las alarmas </h2>
+                <p>El periodista deportivo, que acaba de finalizar contrato con Movistar Plus+, podría estar diciendo adiós a la Fórmula 1, a no ser que DAZN le ofrezca un nuevo contrato.Hablamos de Antonio Lobato, quien durante muchos años ha narrado los Grandes Premios de Fórmula 1. Es bien sabido que el periodista acababa a final de esta temporada su contrato con Movistar Plus+, y su continuidad comentando las carreras dependerá de DAZN, que a partir del próximo año tendrá en exclusiva los derechos de F1 y se encargará directamente de la realización.</p>
+                </article>
+        </div>
+        <div class="c2">
+            <article>
+                <h2>Clasificación de Pilotos tras GP de Abu Dhabi 2023 de F1: ¡Alonso P4! 2</h2>
+                <p>La última carrera del campeonato mundial de Fórmula 1 ofreció emocionantes batallas al inicio, pero la acción en pista disminuyó después de las primeras paradas en boxes. Aunque Leclerc, Alonso, Norris y Sainz competían por la cuarta posición en el campeonato, Alonso no pudo mantener el ritmo. Leclerc destacó con un rendimiento fuerte, mientras que Sainz tuvo que defenderse debido a problemas en la clasificación. Norris sufrió una parada lenta que lo alejó del podio. Finalmente, Alonso logró la cuarta posición en el campeonato al superar a Tsunoda en los últimos momentos, empatando en puntos con Leclerc pero con más podios.</p>
+                <img class="Alonso" src="Alonso.jpeg" title="Alonso" alt="Alonso" />
+            </article>
+        </div>
+        
+        <div class="c3">
+            <article>
+                <h2>Pirelli ha decidido realizar un cambio de cara a la oferta de neumáticos para la temporada 2024 de la Fórmula 1</h2>
+                <p>A lo largo del año, se habló mucho sobre las nuevas gomas que se utilizarían en 2024, como aquellas sin mantas térmicas, que finalmente llegarán en 2025. Sin embargo, finalmente se ha confirmado que el próximo año se utilizará la misma oferta de compuestos, a excepción del C0, que se ha decidido eliminar.</p>
+                <img class="ruedas" src="ruedas.jpg" title="pirelli" alt="pirelli" />
+            </article>
+        </div>
+    </div>
+<hr>
+<div class="container">
+    <div class="c2">
+        <div class="c2a">
+            <article>
+                <h2>Noticia 2</h2>
+                <p>Descripcion    </p>
+            </article>
+        </div>
+        <div class="c2b">
+            <article>
+                <h2>Noticia 3</h2>
+                <p>Descripción de la noticia 3...</p>
+            </article>
+        </div>
+    </div>
+    <div class="c3">
+        <article>
+            <h2>Noticia Estrecha</h2>
+            <p>Descripción de la noticia estrecha...</p>
+        </article>
+    </div>
+    <div class="c2">
+        <div class="c2a">
+            <article>
+                <h2>Noticia 2</h2>
+                <p>Descripción de la noticia 2...</p>
+            </article>
+        </div>
+        <div class="c2b">
+            <article>
+                <h2>Noticia 3</h2>
+                <p>Descripción de la noticia 3...</p>
+            </article>
+        </div>
+    </div>
+</div>
+<hr>
+</body>
+</html>

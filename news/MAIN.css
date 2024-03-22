@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-repeat: no-repeat;
+    background-image: url("fondomainblanco.jpg");
+    background-size: cover;
+    scroll-behavior: smooth;
+    display:flex
+}
+
+.contenedor {
+    display: flex;
+}
+
+.menu-lateral {
+    background-color: #000000;
+    height: 603px;
+    width: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.menu-lateral a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.menu-lateral a:hover {
+    background-color: #555;
+}
+
+.menu-horizontal {
+    background-color: #000000;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 75%;
+    color: #fff;
+    border-bottom-right-radius: 40px;
+}
+
+.flotante-item {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.borde {
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+}
+
+.flotante-item:hover .borde {
+    background-color: #fff;
+}
+
+
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+.flotante-item:hover span {
+    animation: flotar 1s infinite alternate;
+}
+.contenido {
+    padding: 20px;
+    flex: 1;
+}
+.hrcolor{
+    background-color: rgba(128, 128, 128, 0);
+    height: 1px;
+    width: 75%;
+    margin: 20px 0px 0px;
+    border-radius: 50px;
+    color: white   ;
+}
+.hrcolor1{
+    background-color: rgba(128, 128, 128, 0);
+    height: 1px;
+    width: 60px;    
+    margin: 40px -5px 0px;
+    border-radius: 50px;
+    color: white;
+}
+.logo{
+    width: 75%;
+    margin: -10px 0px 0px;
+    background: url(logo.png);
+    filter: drop-shadow(0px 0px 21px #ffffff);
+    animation: rotar 6s linear infinite;
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+
+@keyframes rotar{
+    from {
+        transform: rotateY(180deg);
+    }
+    to{
+        transform: rotateY(-180deg);
+    }
+}
+
+
+.frase-vertical {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    display: inline-block;
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+    margin-top: 40px;
+
+                 
+}
+.logofacebook{
+   
+    width: 30%;
+    margin: 50px 15px 0px;
+}
+.logoweb{
+    width: 30%;
+    margin: 5px 15px 0px;
+}
+.logotwitter{
+    width: 30%;
+    margin: 5px 15px 0px;
+}
+.logoinstagram{
+    width: 30%;
+    margin: 5px 15px 0px;
+}
+.contenedor-imagen {
+    position: relative;
+}
+.columnas{
+    margin: 300px 0px 30px;
+    display: grid;
+    grid-template-columns:  3fr 4fr 3fr;
+    column-gap: 20px;
+    background-color: rgba(12, 12, 12, 0.096);
+    border-radius: 30px;
+    }
+.banner{
+    margin: 20px 0px 0px;
+    width: 75%;
+}

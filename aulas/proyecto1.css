@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    scroll-behavior: smooth;
+    min-height: 100vh !important;
+    width: 100%;
+    background-image: url(fondomapa.jpg) !important;
+}
+
+.contenedor {
+    display: flex;
+    height: 100vh;
+}
+
+.menu-lateral {
+    padding-top: 0.5rem;
+    background-color: #000000;
+    height: 98.7%;
+    width: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-imagen{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-lateral a {
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.menu-lateral a svg {
+    transition-duration: .3s;
+}
+.menu-lateral a svg:hover {
+    fill: #ff8484;
+}
+
+.menu-horizontal {
+    background-color: #000000;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    color: #fff;
+    border-bottom-right-radius: 40px;
+    flex-wrap: wrap;
+    top: 1;
+    bottom: 0;
+}
+
+.flotante-item {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.borde {
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+}
+
+.flotante-item:hover .borde {
+    background-color: #fff;
+}
+
+/* Animación de flotar */
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Aplicar animación de flotar en el hover */
+.flotante-item:hover span {
+    animation: flotar 1s infinite alternate;
+}
+.contenido {
+    padding: 20px;
+    flex: 1;
+}
+.hrcolor{
+    background-color: rgba(128, 128, 128, 0);
+    height: 1px;
+    width: 75%;
+    border-radius: 50px;
+    color: white   ;
+}
+.logo{
+    width: 100%;
+    background: url(logo.png);
+    filter: drop-shadow(0px 0px 21px #ffffff);
+    animation: rotar 6s linear infinite;
+   padding: 5%;
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+
+@keyframes rotar{
+    from {
+        transform: rotateY(180deg);
+    }
+    to{
+        transform: rotateY(-180deg);
+    }
+}
+.frase-vertical {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    display: inline-block;
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+}
+.container{
+    margin: 0px 0px 0px;
+    display: grid;
+    grid-template-columns:  4fr 4fr;
+    column-gap: 20px;
+    background-color: rgba(255, 253, 253, 0.774);
+    border-radius: 30px;
+    }
+.c1{
+        font-size: larger;
+        display: grid;
+        text-align: left;
+        padding-left: 5px;
+        margin: 0% 0% 0%;
+        color:black;
+}
+.c2{
+    display: grid;
+    font-size: larger;
+    text-align: left;
+    margin: -50% 0% 0%;
+    color: black;
+}
+.aula1{
+    width: 76px;
+    height: 53px;
+    margin: -58.7% 51.27% 0% ;
+   margin-right: 45px;
+    float : left;
+    transition: transform 0.3s;
+}
+.aula2{
+    width: 60px;
+    height: 52px;
+    margin: 23.1% 3.5% 0%;
+    
+}
+.aula3{
+    width: 100px;
+    height: 52px;
+    margin: -27.1% 62.5% 0% ;
+   margin-right: 45px;
+    float : left; 
+}
+.aula1:hover{
+    border: 2px solid rgb(0, 0, 0);
+}
+.aula2:hover{
+    border: 2px solid rgb(0, 0, 0);
+}
+.aula3:hover{
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.menu-desplegable {
+    position: relative;
+    display: inline-block;
+    margin: 0px 0x 0px;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+}
+
+.menu-desplegable:hover .submenu {
+    display: block;
+}
+
+.submenu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.submenu a:hover {
+    background-color: #555;
+}
+.logofacebook , .logoweb , .logotwitter , .logoinstagram{
+   padding: 0%;
+    width: 50%;
+    /* margin: 20px 15px 0px; */
+}
+
+.hrcolor1{
+    background-color: rgba(128, 128, 128, 0);
+    padding: auto;
+    height: 1px;
+    width: 60px;
+    border-radius: 50px;
+    color: white;
+}

@@ -1,0 +1,732 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-repeat: no-repeat;
+  background-image: url("fon2.png");
+  background-size: cover;
+  scroll-behavior: smooth;
+}
+
+.contenedor {
+  display: flex;
+}
+
+.menu-lateral {
+  padding-top: 0.5rem;
+  background-color: #000000;
+  height: 39.9em;
+  width: 5%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+.contenedor-imagen{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-lateral a {
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-lateral a svg {
+  transition-duration: .3s;
+}
+.menu-lateral a svg:hover {
+  fill: #858282;
+ 
+}
+
+.menu-horizontal {
+  background-color: #000000;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 75%;
+  color: #fff;
+  border-bottom-right-radius: 40px;
+}
+
+.flotante-item {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.borde {
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s;
+  margin-top: 5px;
+}
+
+.flotante-item:hover .borde {
+  background-color: #fff;
+}
+
+@keyframes flotar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.flotante-item:hover span {
+  animation: flotar 1s infinite alternate;
+}
+.contenido {
+  padding: 20px;
+  flex: 1;
+}
+.hrcolor {
+  background-color: rgba(128, 128, 128, 0);
+  height: 1px;
+  width: 75%;
+  margin: 20px 0px 0px;
+  border-radius: 50px;
+  color: white;
+}
+.hrcolor1 {
+  background-color: rgba(128, 128, 128, 0);
+  height: 1px;
+  width: 60px;
+  margin: 40px -5px 0px;
+  border-radius: 50px;
+  color: white;
+}
+.logo {
+  width: 75%;
+  margin: 10px 0px 0px;
+  background: url(logo.png);
+  filter: drop-shadow(0px 0px 21px #ffffff);
+  animation: rotar 6s linear infinite;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+@keyframes rotar {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(-180deg);
+  }
+}
+
+.frase-vertical {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  display: inline-block;
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  margin-top: 40px;
+}
+.logofacebook {
+  width: 30%;
+  margin: 30px 15px 0px;
+}
+.logoweb {
+  width: 30%;
+  margin: 5px 15px 0px;
+}
+.logotwitter {
+  width: 30%;
+  margin: 5px 15px 0px;
+}
+.logoinstagram {
+  width: 30%;
+  margin: 5px 15px 0px;
+}
+.contenedor-imagen {
+  position: relative;
+}
+
+.flotante-item:hover span {
+  animation: flotar 1s infinite alternate;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los divs secundarios se envuelvan si no hay suficiente espacio */
+  font-size: 12px;
+}
+
+.card {
+  height: 100px;
+  width: 80px;
+  margin: 125px -900px 0px;
+  transition: 300ms;
+  display: flex;
+}
+.personaje_1 {
+  height: 130px;
+  width: 150px;
+  display: flex;
+  border-radius: 10%;
+  background-color: #ffffffa1;
+  background-image: url(logo.png);
+  background-size: cover;
+  transition: 300ms;
+}
+
+.imagen_personaje_1 {
+  height: 100px;
+  width: 120px;
+  margin: 15px 18px 0px;
+  background-image: url(images/IVAN2.PNG);
+  background-size: cover;
+  transition: 300ms;
+  filter: drop-shadow(5px -4px 10px #000);
+}
+.detalle_1 {
+  height: 50px;
+  width: 150px;
+  background-image: url("banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  scroll-behavior: smooth;
+  margin: 0px -18px 0px;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  margin-top: 100px;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  transition: 300ms;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card:hover .imagen_personaje_1 {
+  transform: translateY(-20px);
+  transition: 300ms;
+  filter: none;
+  background-image: url(images/IVAN1.PNG);
+}
+
+.card:hover .personaje_1 {
+  background-color: #424242c9;
+  background-image: url(logonegro.png);
+  background-size: cover;
+}
+.card2 {
+  height: 125px;
+  width: 80px;
+  margin: 125px -725px 0px;
+  transition: 300ms;
+  display: flex;
+}
+.card3 {
+  height: 125px;
+  width: 80px;
+  margin: 125px -500px 0px;
+  transition: 300ms;
+  display: flex;
+}
+.card4 {
+  height: 100px;
+  width: 80px;
+  margin: 125px -275px 0px;
+  transition: 300ms;
+  display: flex;
+}
+.personaje_2 {
+  height: 140px;
+  width: 150px;
+  display: flex;
+  border-radius: 10%;
+  background-color: #ffffffa1;
+  background-image: url(logo.png);
+  background-size: cover;
+  transition: 300ms;
+}
+
+.imagen_personaje_2 {
+  height: 100px;
+  width: 120px;
+  margin: 15px 18px 0px;
+  background-image: url(images/MANU1.PNG);
+  background-size: cover;
+  transition: 300ms;
+  filter: drop-shadow(5px -4px 10px #000);
+}
+.detalle_2 {
+  height: 50px;
+  width: 150px;
+  background-image: url("banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  scroll-behavior: smooth;
+  margin: 0px -18px 0px;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  margin-top: 100px;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  transition: 300ms;
+}
+
+.card2:hover {
+  transform: scale(1.1);
+}
+
+.card2:hover .imagen_personaje_2 {
+  transform: translateY(-20px);
+  transition: 300ms;
+  filter: none;
+  background-image: url(images/MANU2.PNG);
+  filter: drop-shadow(5px -4px 40px #000);
+}
+
+.card2:hover .personaje_2 {
+  background-color: #424242c9;
+  background-image: url(logonegro.png);
+  background-size: cover;
+}
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  margin: auto;
+  width: 90%;
+  font-size: 12px;
+}
+.personaje_3 {
+  height: 130px;
+  width: 150px;
+  display: flex;
+  border-radius: 10%;
+  background-color: #ffffffa1;
+  background-image: url(logo.png);
+  background-size: cover;
+  transition: 300ms;
+}
+
+.imagen_personaje_3 {
+  height: 100px;
+  width: 120px;
+  margin: 15px 18px 0px;
+  background-image: url(images/CARLOSC1.PNG);
+  background-size: cover;
+  transition: 300ms;
+  filter: drop-shadow(5px -4px 10px #000);
+}
+.detalle_3 {
+  height: 50px;
+  width: 150px;
+  background-image: url("banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  scroll-behavior: smooth;
+  margin: 0px -18px 0px;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  margin-top: 100px;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  transition: 300ms;
+}
+
+.card3:hover {
+  transform: scale(1.1);
+}
+
+.card3:hover .imagen_personaje_3 {
+  transform: translateY(-20px);
+  transition: 300ms;
+  filter: none;
+  background-image: url(images/CARLOSC3.PNG);
+}
+
+.card3:hover .personaje_3 {
+  background-color: #424242c9;
+  background-image: url(logonegro.png);
+  background-size: cover;
+}
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.personaje_4 {
+  height: 130px;
+  width: 150px;
+  display: flex;
+  border-radius: 10%;
+  background-color: #ffffffa1;
+  background-image: url(logo.png);
+  background-size: cover;
+  transition: 300ms;
+}
+
+.imagen_personaje_4 {
+  height: 100px;
+  width: 120px;
+  margin: 15px 18px 0px;
+  background-image: url(images/RAQUEL2.PNG);
+  background-size: cover;
+  transition: 300ms;
+  filter: drop-shadow(5px -4px 10px #000);
+}
+.detalle_4 {
+  height: 50px;
+  width: 150px;
+  background-image: url("banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  scroll-behavior: smooth;
+  margin: 0px -18px 0px;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  margin-top: 100px;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  transition: 300ms;
+}
+
+.card4:hover {
+  transform: scale(1.1);
+}
+
+.card4:hover .imagen_personaje_4 {
+  transform: translateY(-20px);
+  transition: 300ms;
+  filter: none;
+  background-image: url(images/RAQUEL1.PNG);
+}
+
+.card4:hover .personaje_4 {
+  background-color: #424242c9;
+  background-image: url(logonegro.png);
+  background-size: cover;
+}
+.card5 {
+  height: 100px;
+  width: 80px;
+  margin: 390px -950px 0px;
+  transition: 300ms;
+  display: flex;
+  font-size: 11px;
+}
+.personaje_5 {
+  height: 130px;
+  width: 150px;
+  display: flex;
+  border-radius: 10%;
+  background-color: #ffffffa1;
+  background-image: url(logo.png);
+  background-size: cover;
+  transition: 300ms;
+}
+
+.imagen_personaje_5 {
+  height: 100px;
+  width: 120px;
+  margin: 15px 18px 0px;
+  background-image: url(images/GUILLE2.PNG);
+  background-size: cover;
+  transition: 300ms;
+  filter: drop-shadow(5px -4px 10px #000);
+}
+.detalle_5 {
+  height: 50px;
+  width: 150px;
+  background-image: url("banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  scroll-behavior: smooth;
+  margin: 0px -18px 0px;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  margin-top: 100px;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  transition: 300ms;
+}
+
+.card5:hover {
+  transform: scale(1.1);
+}
+
+.card5:hover .imagen_personaje_5 {
+  transform: translateY(-20px);
+  transition: 300ms;
+  filter: none;
+  background-image: url(images/GUILLE1.png);
+}
+
+.card5:hover .personaje_5 {
+  background-color: #424242c9;
+  background-image: url(logonegro.png);
+  background-size: cover;
+}
+.card6 {
+  height: 100px;
+  width: 80px;
+  margin: 390px -725px 0px;
+  transition: 300ms;
+  display: flex;
+}
+.personaje_6 {
+  height: 130px;
+  width: 150px;
+  display: flex;
+  border-radius: 10%;
+  background-color: #ffffffa1;
+  background-image: url(logo.png);
+  background-size: cover;
+  transition: 300ms;
+}
+
+.imagen_personaje_6 {
+  height: 100px;
+  width: 120px;
+  margin: 15px 18px 0px;
+  background-image: url(images/DAVID1.png);
+  background-size: cover;
+  transition: 300ms;
+  filter: drop-shadow(5px -4px 10px #000);
+}
+.detalle_6 {
+  height: 50px;
+  width: 150px;
+  background-image: url("banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  scroll-behavior: smooth;
+  margin: 0px -18px 0px;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  margin-top: 100px;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  transition: 300ms;
+}
+
+.card6:hover {
+  transform: scale(1.1);
+}
+
+.card6:hover .imagen_personaje_6 {
+  transform: translateY(-20px);
+  transition: 300ms;
+  filter: none;
+  background-image: url(images/DAVID3.png);
+}
+
+.card6:hover .personaje_6 {
+  background-color: #424242c9;
+  background-image: url(logonegro.png);
+  background-size: cover;
+}
+.card7 {
+  height: 100px;
+  width: 80px;
+  margin: 390px -500px 0px;
+  transition: 300ms;
+  display: flex;
+  font-size: 11px;
+}
+.personaje_7 {
+  height: 130px;
+  width: 150px;
+  display: flex;
+  border-radius: 10%;
+  background-color: #ffffffa1;
+  background-image: url(logo.png);
+  background-size: cover;
+  transition: 300ms;
+}
+
+.imagen_personaje_7 {
+  height: 100px;
+  width: 120px;
+  margin: 15px 18px 0px;
+  background-image: url(images/RAMON1.png);
+  background-size: cover;
+  transition: 300ms;
+  filter: drop-shadow(5px -4px 10px #000);
+}
+.detalle_7 {
+  height: 50px;
+  width: 150px;
+  background-image: url("banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  scroll-behavior: smooth;
+  margin: 0px -18px 0px;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  margin-top: 100px;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  transition: 300ms;
+}
+
+.card7:hover {
+  transform: scale(1.1);
+}
+
+.card7:hover .imagen_personaje_7 {
+  transform: translateY(-20px);
+  transition: 300ms;
+  filter: none;
+  background-image: url(images/RAMON2.png);
+}
+
+.card7:hover .personaje_7 {
+  background-color: #424242c9;
+  background-image: url(logonegro.png);
+  background-size: cover;
+}
+.card8 {
+  height: 100px;
+  width: 80px;
+  margin: 390px -275px 0px;
+  transition: 300ms;
+  display: flex;
+  font-size: 11px;
+}
+.personaje_8 {
+  height: 130px;
+  width: 150px;
+  display: flex;
+  border-radius: 10%;
+  background-color: #ffffffa1;
+  background-image: url(logo.png);
+  background-size: cover;
+  transition: 300ms;
+}
+
+.imagen_personaje_8 {
+  height: 100px;
+  width: 120px;
+  margin: 15px 18px 0px;
+  background-image: url(images/CARLOSD1.PNG);
+  background-size: cover;
+  transition: 300ms;
+  filter: drop-shadow(5px -4px 10px #000);
+}
+.detalle_8 {
+  height: 50px;
+  width: 150px;
+  background-image: url("banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  scroll-behavior: smooth;
+  margin: 0px -18px 0px;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  margin-top: 100px;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  transition: 300ms;
+}
+
+.card8:hover {
+  transform: scale(1.1);
+}
+
+.card8:hover .imagen_personaje_8 {
+  transform: translateY(-20px);
+  transition: 300ms;
+  filter: none;
+  background-image: url(images/CARLOSD2.PNG);
+}
+
+.card8:hover .personaje_8 {
+  background-color: #424242c9;
+  background-image: url(logonegro.png);
+  background-size: cover;
+}
+.card9 {
+  height: 100px;
+  width: 80px;
+  margin: 225px 0px 0px;
+  transition: 300ms;
+  display: flex;
+}
+.personaje_9 {
+  height: 130px;
+  width: 150px;
+  display: flex;
+  border-radius: 10%;
+  background-color: #ffffffa1;
+  background-image: url(logo.png);
+  background-size: cover;
+  transition: 300ms;
+}
+
+.imagen_personaje_9 {
+  height: 100px;
+  width: 120px;
+  margin: 15px 18px 0px;
+  background-image: url(images/NIEVES1.PNG);
+  background-size: cover;
+  transition: 300ms;
+  filter: drop-shadow(5px -4px 10px #000);
+}
+.detalle_9 {
+  height: 50px;
+  width: 150px;
+  background-image: url("banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  scroll-behavior: smooth;
+  margin: 0px -18px 0px;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  margin-top: 100px;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  transition: 300ms;
+}
+
+.card9:hover {
+  transform: scale(1.1);
+}
+
+.card9:hover .imagen_personaje_9 {
+  transform: translateY(-20px);
+  transition: 300ms;
+  filter: none;
+  background-image: url(images/NIEVES2.PNG);
+}
+
+.card9:hover .personaje_9 {
+  background-color: #424242c9;
+  background-image: url(logonegro.png);
+  background-size: cover;
+}
