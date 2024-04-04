@@ -32,7 +32,7 @@ const api = {
       // Se eliminó la entrada de ciudad y la función de búsqueda
     
       try {
-        const response = await fetch(`${api.url}?q=Almendralejo,Spain&appid=${api.key}&lang=es`);
+        const response = await fetch(`${api.url}?q=Almendralejo&appid=${api.key}&lang=es`);
         const data = await response.json();
         card.style.display = 'block';
         city.innerHTML = `${data.name}, ${data.sys.country}`;

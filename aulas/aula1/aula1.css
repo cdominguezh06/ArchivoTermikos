@@ -49,13 +49,16 @@ body {
 
 .menu-horizontal {
     background-color: #000000;
-    height: 60px;
+    height: 10%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 75%;
+    width: 80%;
     color: #fff;
     border-bottom-right-radius: 40px;
+    flex-wrap: wrap;
+    top: 1;
+    bottom: 0;
 }
 
 .flotante-item {
