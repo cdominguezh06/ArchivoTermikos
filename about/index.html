@@ -6,7 +6,7 @@
     <title>Informaci&oacute;n</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='MEMORIA.css'>
-    <script src='main.js'></script>
+    <script  src="script.js" defer></script>
 </head>
 <body>
     <div class="contenedor">
@@ -74,23 +74,25 @@
       <div class="page__content">
         <h1 class="page__content-title"></h1>
         <div class="page__content-blockquote">
-          <p align="center" style="line-height: 1"> A trav&eacute;s del servidor, nuestra p&aacute;gina web, 
-            <p align="center" style="line-height: 1">accede a estos datos y hace una </p>
-            <p align="center" style="line-height: 1"> comparativa con las tomas anteriores, </p>
-            <p align="center" style="line-height: 1">teniendo en cuenta la capacidad del</p>
-            <p align="center" style="line-height: 1">  aula y el uso de la calefacci&oacute;n. </p>
-            <p align="center" style="line-height: 1"> Mediante este sistema pretendemos hacer </p>
-            <p align="center" style="line-height: 1"> un uso &oacute;ptimo de la calefacci&oacute;n </p>
-            <p align="center" style="line-height: 1">  y disminuir el consumo de energ&iacute;a. </p>
-            <p align="center" style="line-height: 1"> asi como reducir los niveles de CO2 </p>
-            <p align="center" style="line-height: 1"> en las aulas</p>
+          <p style="line-height: 1.5; text-align: justify; font-size: 17px; color: #2A2935; font-family: 'Cormorant Garamond', serif;"> A trav&eacute;s del servidor, 
+            nuestra p&aacute;gina web, accede a estos datos y hace una comparativa con las tomas anteriores,
+            teniendo en cuenta la capacidad del aula y el uso de la calefacci&oacute;n. 
+            Mediante este sistema pretendemos hacer un uso &oacute;ptimo de la calefacci&oacute;n en las aulas
+            y disminuir el consumo de energ&iacute;a. asi como reducir los niveles de CO2
            </p>
+          <a href="presentation/index.html">
+           <img id="boton-presentacion" onclick="abrirPresentacion()">
+            <img src="icon.png" alt="Ver presentación" style="width: 60%;border:0; margin-top: -35px;"> 
+          </img>
+        </a>
+          <h5 style="margin-top: 0px;">haz click para ver la presentacion</h5>
+          
         </div>
         <div class="page__content-text">
           <p></p>
           <p></p>
         </div>
-        <div class="page__number">3</div>
+        <div class="page__number"><p>3</p></div>
       </div>
     </label>
       
@@ -140,9 +142,9 @@
     </label>
   </div>  
 </div>
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT9YvFzUXZAhIRHmzYlSxINQcufKZp8QzL85YL32k3qpfVzIkE1jZ17bdvXhpSWp856vo2ZVSVWctay/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
   <!-- partial -->
-    <script  src="./script.js"></script>
+    
         </div>
     </div> 
   </div>

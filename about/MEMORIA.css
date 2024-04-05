@@ -322,6 +322,7 @@ body {
 }
 .book__page .page__content-blockquote {
   margin-bottom: calc(var(--baseline) * 2);
+  text-align: justify;
 }
 .book__page .page__content-blockquote-text {
   font-family: var(--title);

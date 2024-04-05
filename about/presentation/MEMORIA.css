@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-repeat: no-repeat;
+    background-image: url("fondotabla.png");
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+.contenedor {
+    display: flex;
+    height: 100vh;
+}
+
+.menu-lateral {
+  padding-top: 0.5rem;
+  background-color: #000000;
+  height: 40.4em;
+  width: 5%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+.contenedor-imagen{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-lateral a {
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-lateral a svg {
+  transition-duration: .3s;
+}
+.menu-lateral a svg:hover {
+  fill: #858282;
+ 
+}
+
+.menu-horizontal {
+    background-color: #000000;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 75%;
+    color: #fff;
+    border-bottom-right-radius: 40px;
+}
+
+.flotante-item {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.borde {
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+}
+
+.flotante-item:hover .borde {
+    background-color: #fff;
+}
+
+
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+.flotante-item:hover span {
+    animation: flotar 1s infinite alternate;
+}
+.contenido {
+    padding: 20px;
+    flex: 1;
+}
+.hrcolor{
+    background-color: rgba(128, 128, 128, 0);
+    height: 1px;
+    width: 75%;
+    margin: 20px 0px 0px;
+    border-radius: 50px;
+    color: white   ;
+}
+.hrcolor1{
+    background-color: rgba(128, 128, 128, 0);
+    height: 1px;
+    width: 60px;    
+    margin: 40px -5px 0px;
+    border-radius: 50px;
+    color: white;
+}
+.logo{
+
+    width: 75%;
+    margin: 5px 0px 0px;
+    background: url(logo.png);
+    filter: drop-shadow(0px 0px 21px #ffffff);
+    animation: rotar 6s linear infinite;
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+
+@keyframes rotar{
+    from {
+        transform: rotateY(180deg);
+    }
+    to{
+        transform: rotateY(-180deg);
+    }
+}
+
+
+.frase-vertical {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    display: inline-block;
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+    margin-top: 30px;
+}
+
+.logofacebook{
+    width: 30%;
+    margin: 50px 15px 0px;
+}
+.logoweb{
+    width: 30%;
+    margin: 5px 15px 0px;
+}
+.logotwitter{
+    width: 30%;
+    margin: 5px 15px 0px;
+}
+.logoinstagram{
+    width: 30%;
+    margin: 5px 15px 0px;
+}
+.contenedor-imagen {
+    position: relative;
+}
+
+.box{
+  margin: 80px -800px 0px;
+  width: 750px;
+  height: 530px;
+  background: rgba(174, 177, 174, 0.664);
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.present{
+  margin: 15px 15px 0px;
+  border-radius: 25px;
+  overflow: hidden;
+width :725px;
+ height : 500px;
+}
