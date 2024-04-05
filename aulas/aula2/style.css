@@ -26,8 +26,8 @@ p {
 .weather-card {
   margin: 10px  10px;
   width: 90%;
-  height: 85%;
-  background: #f3f6f581;
+  height: 70%;
+  background: #f3f6f557;
   color: var(--bg-color);
   /* padding: 20px; */
   text-align: center;
@@ -80,7 +80,7 @@ p {
 .clase{
   margin: 20px 15px;
   width: 90%;
-  height: 90%;
+  height: 80%;
   background: rgba(174, 177, 174, 0.541);
   color: var(--bg-color);
   padding: 0px;
@@ -97,7 +97,7 @@ p {
 }
 .box{
   width: 30%;
-  height: 80%;
+  height: 90%;
   background: rgba(174, 177, 174, 0.541);
   text-align: center;
   border-radius: 25px;
@@ -105,16 +105,16 @@ p {
   /* padding: 1.5rem; */
 }
 .box2{
-  width: 15%;
-  height: 60%;
-  background: rgba(174, 177, 174, 0.541);
+  width: 20%;
+  height: 65%;
+  background: rgba(174, 177, 174, 0.411);
   text-align: center;
   border-radius: 25px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
 }
 .aula {
-  
-  width: 60%;
+  width: fit-content;
+  width: 50%;
   padding-left: 2%;
   padding-right: 2%;
   img{
@@ -146,3 +146,15 @@ align-items: flex-start;
 padding-inline: 1rem;
 padding-top: 1rem;
 }
+.hablado{
+margin: -10px 0px 0px;
+background: rgba(174, 177, 174, 0.541);
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+border-radius: 15px;
+}
+.hablado1{
+  margin: -5px 0px 0px;
+  background: rgba(174, 177, 174, 0.541);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  }

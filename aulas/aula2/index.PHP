@@ -9,6 +9,8 @@
     <link rel='stylesheet' type='text/css' media='screen' href='aula2.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <script src="main.js" defer></script>
+    <script src="voiceF.js" defer></script>
+    <script src="voiceCiudad.js" defer></script>
 </head>
 
 <body>
@@ -102,9 +104,10 @@
                         <div class="humidity" id="humedad"> humedad</div>
                         <div class="weather" id="weather">Sol</div>
                     </div>
+                    <img src="icon.png" width="20%" margin-top="15px" id="ciudad-hablar" class="hablado1">
                 </div>
                 <div class="aula">
-                    <img src="aula2.png">
+                    <img src="aula3.png">
                 </div>
                 <div class="box">
                     <div class="clase">
@@ -123,7 +126,7 @@
                             $conn = new mysqli($servidor, $usuario, $password, $db);
 
                             //Cambiar esta variable segun las otras tablas
-                            $tabla = "lectaula1";
+                            $tabla = "lectsala";
 
                             /* Para tener en cuenta
                             al final SIEMPRE TIENE QUE SER 'fecha, hora.'
@@ -142,6 +145,8 @@
                             $campos = array();
                             $columns = selectCreator($select);
                             #print_r($columns);
+                        
+
 
                             echo '<tr>';
 
@@ -152,53 +157,63 @@
                                 switch ($columns[$i]) {
                                     case 'temperatura':
                                             echo '<tr><td><font face="Helvetica">' . $columns[$i] . '</font></td>';
-                                            echo '<td style="text-align: right">' . $clave . ' ºC' . '</td>';
+                                            echo '<td style="text-align: center" id="temperatura">' . $clave . ' ºGRADOS' . '</td>';
                                                 $temperatura = $clave;
+                                                
                                         break;
                                     case 'fecha':
                                             echo '<tr><td><font face="Helvetica" size="1">' . "Ultima Actualizacionㅤ" . '</font></td>';
-                                            echo '<td style="text-align: center"><font size="1">' . $clave . " " . $row[$columns[$i + 1]] . '</font></td>';
-                                        break;
+                                            echo '<td style="text-align: center"><font size="1" id="fecha">' . $clave . " " . $row[$columns[$i + 1]] . '</font></td>';
+                                            
+                                            break;
                                     case 'hora':
                                         break;
                                     case 'humedad':
                                             echo '<tr><td><font face="Helvetica">' . $columns[$i] . '</font></td>';
-                                            echo '<td style="text-align: right">' . $clave . '</td>';
+                                            echo '<td style="text-align: center" id="humedadAula">' . $clave . " %". '</td>';
                                                 $humedad = $clave;
+                                                
                                         break;
-                                    default:
-                                            echo '<tr><td><font face="Helvetica">' . $columns[$i] . '</font></td>';
-                                            echo '<td style="text-align: right">' . $clave . '</td>';
-                                        break;
+                                        case 'calidadaire':
+                                            echo '<tr><td><font face="Helvetica">' . "Calidad del Aire". '</font></td>';
+                                          echo '<td style="text-align: center" id="calidad">' . $clave . " PPM". '</td>';
+                                          $calidadaire = $clave;
+                                  break;
+                                  case 'gasespeligrosos':
+                                      echo '<tr><td><font face="Helvetica">' . "Gases Peligrosos" . '</font></td>';
+                                      echo '<td style="text-align: center" id="gases">' . $clave . " PPM".  '</td>';
+                                      $gasespeligrosos = $clave;
+                                  break;
                                         }
                                     }
                                 }
+                                
                             echo "</tr>";
-                            echo '<tr><td colspan = 2 style="text-align: center"><font face="Helvetica"><b><u>' . 'Recomendaciones' . '</u></b></font></td>';
+                            echo '<tr><td colspan = 2 style="text-align: center"><font face="Helvetica color = blue"><b><u>' . 'Recomendaciones' . '</u></b></font></td>';
                             echo "<tr>";
                                 switch ($temperatura){
                                     case $temperatura <23:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Temperatura</td>';
-                                        echo '<td colspan = 1 style="text-align: center"><font face="Helvetica" style ="font-size: 14px">' . 'Menor a 23 ºC, cerrar ventanas' . '</font></td></tr>';
+                                        echo '<td colspan = 1 style="text-align: center"><font face="Helvetica" style ="font-size: 14px color:red" id="reTemp">' . 'Menor a 23 ºC, cerrar ventanas' . '</font></td></tr>';
                                         break;
                                     case $temperatura > 25:
-                                        echo '<tr><td colspan = 2 style="text-align: center"><font face="Helvetica">' . 'Mayor que 25 ºC, abrir ventanas' . '</font></td></tr>';
+                                        echo '<tr><td colspan = 2 style="text-align: center"><font face="Helvetica color: red" id="reTemp">' . 'Mayor que 25 ºC, abrir ventanas' . '</font></td></tr>';
                                         break;
                                     default:
-                                        echo '<tr><td colspan = 2 style="text-align: center"><font face="Helvetica">' . 'Entre 23 ºC y 25 ºC, estado optimo' . '</font></td></tr>';
+                                        echo '<tr><td colspan = 2 style="text-align: center"><font face="Helvetica color:green" id="reTemp">' . 'Entre 23 ºC y 25 ºC, estado optimo' . '</font></td></tr>';
                                         break;
                                 }
                                 switch ($humedad){
                                     case $humedad <45:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Humedad</td>';
-                                        echo '<td colspan = 1 style="text-align: center"><font face="Helvetica" style ="font-size: 14px">' . 'Menor a 45%, poca humedad' . '</font></td></tr>';
+                                        echo '<td colspan = 1 style="text-align: center"><font face="Helvetica" style ="font-size: 14px color:red" id="reHum">' . 'Menor a 45%, poca humedad' . '</font></td></tr>';
                                         break;
                                     case $humedad > 60:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Humedad</td>';
-                                        echo '<td colspan = 2 style="text-align: center"><font face="Helvetica" style ="font-size: 14px">' . 'Mayor que 60%, mucha humedad' . '</font></td></tr>';
+                                        echo '<td colspan = 2 style="text-align: center"><font face="Helvetica" style ="font-size: 14px color:red" id="reHum">' . 'Mayor que 60%, mucha humedad' . '</font></td></tr>';
                                         break;
                                     default:
-                                        echo '<tr><td colspan = 2 style="text-align: center"><font face="Helvetica">' . 'Entre 45% y 60&, estado optimo' . '</font></td></tr>';
+                                        echo '<tr><td colspan = 2 style="text-align: center"><font face="Helvetica color:green" id="reHum">' . 'Entre 45% y 60&, estado optimo' . '</font></td></tr>';
                                         break;
                                 }
                             }
@@ -223,6 +238,7 @@
                             ?>
                         </table>
                     </div>
+                    <img src="icon.png" width="15%" id="imagen-hablar" class="hablado">
                 </div>
             </div>
 </body>
