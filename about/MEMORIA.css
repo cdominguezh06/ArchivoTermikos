@@ -16,7 +16,7 @@ body {
 .menu-lateral {
   padding-top: 0.5rem;
   background-color: #000000;
-  height: 40.4em;
+  height: 100%;
   width: 5%;
   display: flex;
   justify-content: space-between;
@@ -189,9 +189,12 @@ body {
 }
 
 .cover {
-  width: calc(var(--baseline) * 60);
-  height: calc(var(--baseline) * 42.6);
+
+  width: 100%;
+  height: 85%;
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);
+  border-radius: 35px;
+  margin: 15px 20px 0px;
 
 }
 
@@ -200,9 +203,10 @@ body {
   height: 100%;
   display: flex;
   perspective: 1200px;
-  margin: 10px 15px 0px;
+ 
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);
   border-radius: 40px;
+  overflow: hidden;
 }
 .book__page {
   position: relative;
@@ -359,11 +363,28 @@ body {
   transform: rotateY(-180deg);
 }
 .box{
-  margin: 80px -800px 0px;
-  width: 750px;
-  height: 530px;
+  margin: 80px -950px 0px;
+  width: 950px;
+  height: 680px;
   background: rgba(174, 177, 174, 0.664);
   text-align: center;
   border-radius: 25px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
 }
+.presentacion{
+  width: 60%;
+  margin: -5px 65px 0px;
+  overflow: hidden;
+}
+.frase-presentacion{
+  margin: 0px 45px 0px;
+}
+.hablado{
+  margin-top: 10px;
+  background: rgba(174, 177, 174, 0.541);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  width: 8%;
+  
+  }

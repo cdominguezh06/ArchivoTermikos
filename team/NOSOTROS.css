@@ -15,7 +15,7 @@ body {
 .menu-lateral {
   padding-top: 0.5rem;
   background-color: #000000;
-  height: 39.9em;
+  height: 761px;
   width: 5%;
   display: flex;
   justify-content: space-between;
@@ -168,18 +168,19 @@ body {
   display: flex;
   flex-wrap: wrap; /* Permite que los divs secundarios se envuelvan si no hay suficiente espacio */
   font-size: 12px;
+  height: 100%;
 }
 
 .card {
-  height: 100px;
-  width: 80px;
-  margin: 125px -900px 0px;
+  height: 200px;
+  width: 180px;
+  margin: 125px -1200px 0px;
   transition: 300ms;
   display: flex;
 }
 .personaje_1 {
-  height: 130px;
-  width: 150px;
+  height: 230px;
+  width: 250px;
   display: flex;
   border-radius: 10%;
   background-color: #ffffffa1;
@@ -189,8 +190,8 @@ body {
 }
 
 .imagen_personaje_1 {
-  height: 100px;
-  width: 120px;
+  height: 200px;
+  width: 220px;
   margin: 15px 18px 0px;
   background-image: url(images/IVAN1.PNG);
   background-size: cover;
@@ -198,16 +199,16 @@ body {
   filter: drop-shadow(5px -4px 10px #000);
 }
 .detalle_1 {
-  height: 50px;
-  width: 150px;
+  height: 60px;
+  width: 250px;
   background-image: url("banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   scroll-behavior: smooth;
-  margin: 0px -18px 0px;
+  margin: 175px -18px 0px;
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
-  margin-top: 100px;
+  
   z-index: 2;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
@@ -230,30 +231,38 @@ body {
   background-image: url(logonegro.png);
   background-size: cover;
 }
+.texto-1{
+  margin: -10px 50px 0px; 
+}
+.texto1{
+  margin: 10px 35px 0px; 
+}
 .card2 {
-  height: 125px;
-  width: 80px;
-  margin: 125px -725px 0px;
+  height: 200px;
+  width: 180px;
+  margin: 125px -900px 0px;
   transition: 300ms;
   display: flex;
 }
 .card3 {
-  height: 125px;
-  width: 80px;
-  margin: 125px -500px 0px;
+  height: 200px;
+  width: 180px;
+
+  margin: 125px -600px 0px;
   transition: 300ms;
   display: flex;
 }
 .card4 {
-  height: 100px;
-  width: 80px;
-  margin: 125px -275px 0px;
+  height: 200px;
+  width: 180px;
+
+  margin: 125px -300px 0px;
   transition: 300ms;
   display: flex;
 }
 .personaje_2 {
-  height: 140px;
-  width: 150px;
+  height: 230px;
+  width: 250px;
   display: flex;
   border-radius: 10%;
   background-color: #ffffffa1;
@@ -263,25 +272,24 @@ body {
 }
 
 .imagen_personaje_2 {
-  height: 100px;
-  width: 120px;
-  margin: 15px 18px 0px;
+  height: 200px;
+  width: 220px;
+margin: 15px 18px 0px;
   background-image: url(images/MANU1.PNG);
   background-size: cover;
   transition: 300ms;
   filter: drop-shadow(5px -4px 10px #000);
 }
 .detalle_2 {
-  height: 50px;
-  width: 150px;
+  height: 60px;
+  width: 250px;
   background-image: url("banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   scroll-behavior: smooth;
-  margin: 0px -18px 0px;
+  margin: 175px -18px 0px;
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
-  margin-top: 100px;
   z-index: 2;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
@@ -310,15 +318,20 @@ h2 {
   align-items: center;
   justify-content: center;
 }
-
+.texto-2{
+  margin: -10px 50px 0px; 
+}
+.texto2{
+  margin: 10px 35px 0px; 
+}
 p {
   margin: auto;
   width: 90%;
   font-size: 12px;
 }
 .personaje_3 {
-  height: 130px;
-  width: 150px;
+  height: 230px;
+  width: 250px;
   display: flex;
   border-radius: 10%;
   background-color: #ffffffa1;
@@ -328,8 +341,8 @@ p {
 }
 
 .imagen_personaje_3 {
-  height: 100px;
-  width: 120px;
+  height: 200px;
+  width: 220px;
   margin: 15px 18px 0px;
   background-image: url(images/CARLOSC1.PNG);
   background-size: cover;
@@ -337,16 +350,15 @@ p {
   filter: drop-shadow(5px -4px 10px #000);
 }
 .detalle_3 {
-  height: 50px;
-  width: 150px;
+  height: 60px;
+  width: 250px;
   background-image: url("banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   scroll-behavior: smooth;
-  margin: 0px -18px 0px;
+  margin: 175px -18px 0px;
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
-  margin-top: 100px;
   z-index: 2;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
@@ -374,9 +386,15 @@ h2 {
   align-items: center;
   justify-content: center;
 }
+.texto-3{
+  margin: -10px 50px 0px; 
+}
+.texto3{
+  margin: 10px 35px 0px; 
+}
 .personaje_4 {
-  height: 130px;
-  width: 150px;
+  height: 230px;
+  width: 250px;
   display: flex;
   border-radius: 10%;
   background-color: #ffffffa1;
@@ -386,8 +404,8 @@ h2 {
 }
 
 .imagen_personaje_4 {
-  height: 100px;
-  width: 120px;
+  height: 200px;
+  width: 220px;
   margin: 15px 18px 0px;
   background-image: url(images/RAQUEL1.PNG);
   background-size: cover;
@@ -395,8 +413,8 @@ h2 {
   filter: drop-shadow(5px -4px 10px #000);
 }
 .detalle_4 {
-  height: 50px;
-  width: 150px;
+  height: 60px;
+  width: 250px;
   background-image: url("banner.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -404,7 +422,7 @@ h2 {
   margin: 0px -18px 0px;
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
-  margin-top: 100px;
+  margin-top: 175px;
   z-index: 2;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
@@ -419,7 +437,7 @@ h2 {
   transform: translateY(-20px);
   transition: 300ms;
   filter: none;
-  background-image: url(images/RAQUEL2.JPG);
+  background-image: url(images/RAQUEL2.PNG);
 }
 
 .card4:hover .personaje_4 {
@@ -427,17 +445,24 @@ h2 {
   background-image: url(logonegro.png);
   background-size: cover;
 }
+.texto-4{
+  margin: -10px 50px 0px; 
+}
+.texto4{
+  margin: 10px 35px 0px; 
+}
 .card5 {
-  height: 100px;
-  width: 80px;
-  margin: 390px -950px 0px;
+  height: 200px;
+  width: 180px;
+  margin: 450px -1200px 0px;
   transition: 300ms;
   display: flex;
   font-size: 11px;
 }
+
 .personaje_5 {
-  height: 130px;
-  width: 150px;
+  height: 230px;
+  width: 250px;
   display: flex;
   border-radius: 10%;
   background-color: #ffffffa1;
@@ -447,8 +472,8 @@ h2 {
 }
 
 .imagen_personaje_5 {
-  height: 100px;
-  width: 120px;
+  height: 200px;
+  width: 220px;
   margin: 15px 18px 0px;
   background-image: url(images/GUILLE1.PNG);
   background-size: cover;
@@ -456,8 +481,8 @@ h2 {
   filter: drop-shadow(5px -4px 10px #000);
 }
 .detalle_5 {
-  height: 50px;
-  width: 150px;
+  height: 60px;
+  width: 250px;
   background-image: url("banner.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -465,7 +490,7 @@ h2 {
   margin: 0px -18px 0px;
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
-  margin-top: 100px;
+  margin-top: 175px;
   z-index: 2;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
@@ -488,16 +513,22 @@ h2 {
   background-image: url(logonegro.png);
   background-size: cover;
 }
+.texto-5{
+  margin: -10px 50px 0px; 
+}
+.texto5{
+  margin: 10px 35px 0px; 
+}
 .card6 {
-  height: 100px;
-  width: 80px;
-  margin: 390px -725px 0px;
+  height: 200px;
+  width: 180px;
+  margin: 450px -900px 0px;
   transition: 300ms;
   display: flex;
 }
 .personaje_6 {
-  height: 130px;
-  width: 150px;
+  height: 230px;
+  width: 250px;
   display: flex;
   border-radius: 10%;
   background-color: #ffffffa1;
@@ -507,8 +538,8 @@ h2 {
 }
 
 .imagen_personaje_6 {
-  height: 100px;
-  width: 120px;
+  height: 200px;
+  width: 220px;
   margin: 15px 18px 0px;
   background-image: url(images/DAVID1.png);
   background-size: cover;
@@ -516,8 +547,8 @@ h2 {
   filter: drop-shadow(5px -4px 10px #000);
 }
 .detalle_6 {
-  height: 50px;
-  width: 150px;
+  height: 60px;
+  width: 250px;
   background-image: url("banner.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -525,7 +556,7 @@ h2 {
   margin: 0px -18px 0px;
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
-  margin-top: 100px;
+  margin-top: 175px;
   z-index: 2;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
@@ -548,17 +579,23 @@ h2 {
   background-image: url(logonegro.png);
   background-size: cover;
 }
+.texto-6{
+  margin: -10px 50px 0px; 
+}
+.texto6{
+  margin: 10px 35px 0px; 
+}
 .card7 {
-  height: 100px;
-  width: 80px;
-  margin: 390px -500px 0px;
+  height: 200px;
+  width: 180px;
+  margin: 450px -600px 0px;
   transition: 300ms;
   display: flex;
   font-size: 11px;
 }
 .personaje_7 {
-  height: 130px;
-  width: 150px;
+  height: 230px;
+  width: 250px;
   display: flex;
   border-radius: 10%;
   background-color: #ffffffa1;
@@ -568,8 +605,8 @@ h2 {
 }
 
 .imagen_personaje_7 {
-  height: 100px;
-  width: 120px;
+  height: 200px;
+  width: 220px;
   margin: 15px 18px 0px;
   background-image: url(images/RAMON1.png);
   background-size: cover;
@@ -577,8 +614,8 @@ h2 {
   filter: drop-shadow(5px -4px 10px #000);
 }
 .detalle_7 {
-  height: 50px;
-  width: 150px;
+  height: 60px;
+  width: 250px;
   background-image: url("banner.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -586,7 +623,7 @@ h2 {
   margin: 0px -18px 0px;
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
-  margin-top: 100px;
+  margin-top: 175px;
   z-index: 2;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
@@ -609,17 +646,23 @@ h2 {
   background-image: url(logonegro.png);
   background-size: cover;
 }
+.texto-7{
+  margin: -10px 50px 0px; 
+}
+.texto7{
+  margin: 10px 35px 0px; 
+}
 .card8 {
-  height: 100px;
-  width: 80px;
-  margin: 390px -275px 0px;
+  height: 200px;
+  width: 180px;
+  margin: 450px -300px 0px;
   transition: 300ms;
   display: flex;
   font-size: 11px;
 }
 .personaje_8 {
-  height: 130px;
-  width: 150px;
+  height: 230px;
+  width: 250px;
   display: flex;
   border-radius: 10%;
   background-color: #ffffffa1;
@@ -629,8 +672,8 @@ h2 {
 }
 
 .imagen_personaje_8 {
-  height: 100px;
-  width: 120px;
+  height: 200px;
+  width: 220px;
   margin: 15px 18px 0px;
   background-image: url(images/CARLOSD1.PNG);
   background-size: cover;
@@ -638,8 +681,8 @@ h2 {
   filter: drop-shadow(5px -4px 10px #000);
 }
 .detalle_8 {
-  height: 50px;
-  width: 150px;
+  height: 60px;
+  width: 250px;
   background-image: url("banner.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -647,7 +690,7 @@ h2 {
   margin: 0px -18px 0px;
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
-  margin-top: 100px;
+  margin-top: 175px;
   z-index: 2;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
@@ -670,16 +713,22 @@ h2 {
   background-image: url(logonegro.png);
   background-size: cover;
 }
+.texto-8{
+  margin: -10px 50px 0px; 
+}
+.texto8{
+  margin: 10px 35px 0px; 
+}
 .card9 {
-  height: 100px;
-  width: 80px;
-  margin: 225px 0px 0px;
+  height: 200px;
+  width: 180px;
+  margin: 300px 25px 0px;
   transition: 300ms;
   display: flex;
 }
 .personaje_9 {
-  height: 130px;
-  width: 150px;
+  height: 230px;
+  width: 250px;
   display: flex;
   border-radius: 10%;
   background-color: #ffffffa1;
@@ -689,8 +738,8 @@ h2 {
 }
 
 .imagen_personaje_9 {
-  height: 100px;
-  width: 120px;
+  height: 200px;
+  width: 220px;
   margin: 15px 18px 0px;
   background-image: url(images/NIEVES1.PNG);
   background-size: cover;
@@ -698,8 +747,8 @@ h2 {
   filter: drop-shadow(5px -4px 10px #000);
 }
 .detalle_9 {
-  height: 50px;
-  width: 150px;
+  height: 60px;
+  width: 250px;
   background-image: url("banner.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -707,7 +756,7 @@ h2 {
   margin: 0px -18px 0px;
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
-  margin-top: 100px;
+  margin-top: 175px;
   z-index: 2;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
@@ -729,4 +778,10 @@ h2 {
   background-color: #424242c9;
   background-image: url(logonegro.png);
   background-size: cover;
+}
+.texto-9{
+  margin: -10px 50px 0px; 
+}
+.texto9{
+  margin: 10px 35px 0px; 
 }

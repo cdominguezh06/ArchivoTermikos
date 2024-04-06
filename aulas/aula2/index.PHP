@@ -107,7 +107,7 @@
                     <img src="icon.png" width="20%" margin-top="15px" id="ciudad-hablar" class="hablado1">
                 </div>
                 <div class="aula">
-                    <img src="aula3.png">
+                    <img src="aula2.png">
                 </div>
                 <div class="box">
                     <div class="clase">
