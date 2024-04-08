@@ -156,20 +156,20 @@
                                             $clave = $row[$columns[$i]];
                                 switch ($columns[$i]) {
                                     case 'temperatura':
-                                            echo '<tr><td><font face="Helvetica">' . $columns[$i] . '</font></td>';
+                                            echo '<tr><td><font face="Helvetica">' . "Temperatura" . '</font></td>';
                                             echo '<td style="text-align: center" id="temperatura">' . $clave . ' ºGRADOS' . '</td>';
                                                 $temperatura = $clave;
                                                 
                                         break;
                                     case 'fecha':
-                                            echo '<tr><td><font face="Helvetica" size="1">' . "Ultima Actualizacionㅤ" . '</font></td>';
+                                            echo '<tr><td><font face="Helvetica" size="1">' . "Última Actualizaciónㅤ" . '</font></td>';
                                             echo '<td style="text-align: center"><font size="1" id="fecha">' . $clave . " " . $row[$columns[$i + 1]] . '</font></td>';
                                             
                                             break;
                                     case 'hora':
                                         break;
                                     case 'humedad':
-                                            echo '<tr><td><font face="Helvetica">' . $columns[$i] . '</font></td>';
+                                            echo '<tr><td><font face="Helvetica">' . "Humedad" . '</font></td>';
                                             echo '<td style="text-align: center" id="humedadAula">' . $clave . " %". '</td>';
                                                 $humedad = $clave;
                                                 
@@ -192,28 +192,28 @@
                             echo '<tr><td colspan = 2 style="text-align: center"><font face="Helvetica color = blue"><b><u>' . 'Recomendaciones' . '</u></b></font></td>';
                             echo "<tr>";
                                 switch ($temperatura){
-                                    case $temperatura <23:
+                                    case $temperatura <19:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Temperatura</td>';
-                                        echo '<td colspan = 1 style="text-align: center"><font face="Helvetica" style ="font-size: 14px color:red" id="reTemp">' . 'Menor a 23 ºC, cerrar ventanas' . '</font></td></tr>';
+                                        echo '<td colspan = 1 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red "  id="reTemp">' . 'Menor a 23 ºC, cerrar ventanas' . '</font></td></tr>';
                                         break;
                                     case $temperatura > 25:
-                                        echo '<tr><td colspan = 2 style="text-align: center"><font face="Helvetica color: red" id="reTemp">' . 'Mayor que 25 ºC, abrir ventanas' . '</font></td></tr>';
+                                        echo '<tr><td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red " id="reTemp">' . 'Mayor que 25 ºC, abrir ventanas' . '</font></td></tr>';
                                         break;
                                     default:
-                                        echo '<tr><td colspan = 2 style="text-align: center"><font face="Helvetica color:green" id="reTemp">' . 'Entre 23 ºC y 25 ºC, estado optimo' . '</font></td></tr>';
+                                        echo '<tr><td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=green " id="reTemp">' . 'Entre 23 ºC y 25 ºC, estado óptimo' . '</font></td></tr>';
                                         break;
                                 }
                                 switch ($humedad){
                                     case $humedad <45:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Humedad</td>';
-                                        echo '<td colspan = 1 style="text-align: center"><font face="Helvetica" style ="font-size: 14px color:red" id="reHum">' . 'Menor a 45%, poca humedad' . '</font></td></tr>';
+                                        echo '<td colspan = 1 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red " id="reHum">' . 'Menor a 45%, poca humedad' . '</font></td></tr>';
                                         break;
                                     case $humedad > 60:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Humedad</td>';
-                                        echo '<td colspan = 2 style="text-align: center"><font face="Helvetica" style ="font-size: 14px color:red" id="reHum">' . 'Mayor que 60%, mucha humedad' . '</font></td></tr>';
+                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red " id="reHum">' . 'Mayor que 60%, mucha humedad' . '</font></td></tr>';
                                         break;
                                     default:
-                                        echo '<tr><td colspan = 2 style="text-align: center"><font face="Helvetica color:green" id="reHum">' . 'Entre 45% y 60&, estado optimo' . '</font></td></tr>';
+                                        echo '<tr><td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=green " id="reHum">' . 'Entre 45% y 60&, estado óptimo' . '</font></td></tr>';
                                         break;
                                 }
                             }
@@ -236,6 +236,7 @@
                                             return $selectString;
                                         }
                             ?>
+
                         </table>
                     </div>
                     <img src="icon.png" width="15%" id="imagen-hablar" class="hablado">
