@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Sala padres</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='aula1.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
@@ -148,8 +148,6 @@
                             $result = $conn->query($sql);
                             $campos = array();
                             $columns = selectCreator($select);
-                            $windSpeed = $_COOKIE['velocidad'];
-                            echo '<tr>' .$windSpeed . '</tr>';
                             
                             
                             echo '<tr>';
@@ -227,7 +225,7 @@
                                         echo '<tr><td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=green " id="reHum">' . 'Entre 45% y 60&, estado óptimo' . '</font></td></tr>';
                                         break;
                                 }
-                                $resultado = 48.4428/(0.9102 * 5 * $windSpeed);
+                               
                                 switch ($gasespeligrosos){
                                     case $gasespeligrosos>=10 and $gasespeligrosos<50:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Gases Peligrosos</td>';
@@ -239,16 +237,16 @@
                                         break;
                                     case $gasespeligrosos>=200 and $gasespeligrosos<400:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Gases Peligrosos</td>';
-                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=yellow " id="reGas">' . 'Aceptables, ventilación opcional durante ' .floor($resultado) . ' horas</font></td></tr>';
+                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=yellow " id="reGas">' . 'Aceptables, ventilación opcional</font></td></tr>';
                                         break;
                                     case $gasespeligrosos>=400 and $gasespeligrosos<1000:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Gases Peligrosos</td>';
                                         
-                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=yellow " id="reGas">' . 'Ventilacion sugerida durante ' .floor($resultado) . ' horas</font></td></tr>';
+                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=yellow " id="reGas">' . 'Ventilacion sugeridas</font></td></tr>';
                                         break;
                                     case $gasespeligrosos>=1000 and $gasespeligrosos<2000:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Gases Peligrosos</td>';
-                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red " id="reGas">' . 'Ventilacion inmediata durante ' .floor($resultado) . ' horas</font></td></tr>';
+                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red " id="reGas">' . 'Ventilacion inmediata</font></td></tr>';
                                         break;
                                     case $gasespeligrosos>=2000:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Gases Peligrosos</td>';
