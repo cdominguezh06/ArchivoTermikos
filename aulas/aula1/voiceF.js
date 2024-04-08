@@ -18,14 +18,14 @@ function decirAula(texto) {
   var textohumedad = numero.toLocaleString("es-ES");
   console.log(textohumedad); // Salida: "veinticinco"*/
   //calidadAire
-  var humedad = document.getElementById("calidad").textContent;
+  var calidad = document.getElementById("calidad").textContent;
   var numero = calidad;
   var textocalidad = numero.toLocaleString("es-ES");
   console.log(textocalidad); // Salida: "veinticinco"*/
-  //calidadAire
+  //Gases
   var gases = document.getElementById("gases").textContent;
-  var numero1 = parseInt(gases); // Convertir a entero
-  var textogasespeligrosos = numero1.toLocaleString("es-ES");
+  var numero = gases; // Convertir a numero con decimales
+  var textogasespeligrosos = numero;
   console.log(textogasespeligrosos);
   //FECHA
   const fechaUser = document.getElementById("fecha").textContent;
@@ -46,6 +46,12 @@ function decirAula(texto) {
      //recomendaciones de humedad
      var reHum = document.getElementById("reHum").textContent;
 
+     //recomendaciones de calidad
+     var reCal = document.getElementById("reCal").textContent;
+
+     //recomendaciones de gases
+     var reGas = document.getElementById("reGas").textContent;
+
   //salida voz
   if (texto && texto.length > 0) {
     var utterance = new SpeechSynthesisUtterance(
@@ -54,14 +60,14 @@ function decirAula(texto) {
     var utterance1 = new SpeechSynthesisUtterance(
       texto + " humedad del aire es" + " " + textohumedad
     );
-    var utterance2 = new SpeechSynthesisUtterance(
-      texto + " calidad del aire es" + " " + numero1 + " partes por millon"
-    );
     var utterance3 = new SpeechSynthesisUtterance(
-      " los gases peligrosos son un " +
+      texto + " calidad del aire es" + " " + textocalidad + " , partes por millón"
+    );
+    var utterance2 = new SpeechSynthesisUtterance(
+      " los gases peligrosos son " +
         " " +
         textogasespeligrosos +
-        " partes por millon"
+        ", partes por millón"
     );
     var utterance4 = new SpeechSynthesisUtterance(
       "La última actualización ha sido el " +
@@ -77,6 +83,14 @@ function decirAula(texto) {
     var utterance7 = new SpeechSynthesisUtterance(
       "la humedad es " +reHum
     );
+     var utterance8 = new SpeechSynthesisUtterance(
+      "los gases peligrosos son " +reGas
+    );
+    var utterance9 = new SpeechSynthesisUtterance(
+      "la calidad del aire es " +reCal
+    );
+
+   
     utterance.lang = "es-ES";
     speechSynthesis.speak(utterance);
     speechSynthesis.speak(utterance1);
@@ -86,5 +100,7 @@ function decirAula(texto) {
     speechSynthesis.speak(utterance5);
     speechSynthesis.speak(utterance6);
     speechSynthesis.speak(utterance7);
+    speechSynthesis.speak(utterance8);
+    speechSynthesis.speak(utterance9);
   }
 }

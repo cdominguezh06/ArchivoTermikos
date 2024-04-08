@@ -24,7 +24,7 @@ function decirAula(texto) {
   console.log(textocalidad); // Salida: "veinticinco"*/
   //Gases
   var gases = document.getElementById("gases").textContent;
-  var numero = parseInt(gases); // Convertir a numero con decimales
+  var numero = gases; // Convertir a numero con decimales
   var textogasespeligrosos = numero;
   console.log(textogasespeligrosos);
   //FECHA
@@ -49,6 +49,9 @@ function decirAula(texto) {
      //recomendaciones de calidad
      var reCal = document.getElementById("reCal").textContent;
 
+     //recomendaciones de gases
+     var reGas = document.getElementById("reGas").textContent;
+
   //salida voz
   if (texto && texto.length > 0) {
     var utterance = new SpeechSynthesisUtterance(
@@ -57,10 +60,10 @@ function decirAula(texto) {
     var utterance1 = new SpeechSynthesisUtterance(
       texto + " humedad del aire es" + " " + textohumedad
     );
-    var utterance2 = new SpeechSynthesisUtterance(
+    var utterance3 = new SpeechSynthesisUtterance(
       texto + " calidad del aire es" + " " + textocalidad + " , partes por millón"
     );
-    var utterance3 = new SpeechSynthesisUtterance(
+    var utterance2 = new SpeechSynthesisUtterance(
       " los gases peligrosos son " +
         " " +
         textogasespeligrosos +
@@ -80,9 +83,14 @@ function decirAula(texto) {
     var utterance7 = new SpeechSynthesisUtterance(
       "la humedad es " +reHum
     );
-    var utterance8 = new SpeechSynthesisUtterance(
+     var utterance8 = new SpeechSynthesisUtterance(
+      "los gases peligrosos son " +reGas
+    );
+    var utterance9 = new SpeechSynthesisUtterance(
       "la calidad del aire es " +reCal
     );
+
+   
     utterance.lang = "es-ES";
     speechSynthesis.speak(utterance);
     speechSynthesis.speak(utterance1);
@@ -93,5 +101,6 @@ function decirAula(texto) {
     speechSynthesis.speak(utterance6);
     speechSynthesis.speak(utterance7);
     speechSynthesis.speak(utterance8);
+    speechSynthesis.speak(utterance9);
   }
 }

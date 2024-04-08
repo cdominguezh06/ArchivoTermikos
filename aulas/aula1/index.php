@@ -160,7 +160,8 @@
                                 switch ($columns[$i]) {
                                     case 'temperatura':
                                             echo '<tr><td><font face="Helvetica">' . "Temperatura" . '</font></td>';
-                                            echo '<td style="text-align: center" id="temperatura">' . $clave . ' ºGRADOS' . '</td>';
+                                            echo '<td style="text-align: center">' . $clave . ' ºC' . '</td>';
+                                            echo '<p id="temperatura" hidden>'. $clave . 'grados centígrados </p>';
                                                 $temperatura = $clave;
                                                 
                                         break;
@@ -178,15 +179,16 @@
                                                 
                                         break;
                                         case 'calidadaire':
-                                            echo '<tr><td><font face="Helvetica">' . "Calidad del Aire". '</font></td>';
-                                          echo '<td style="text-align: center" id="calidad">' . $clave . " PPM". '</td>';
-                                          $calidadaire = $clave;
+                                            echo '<tr><td><font face="Helvetica">' . "Gases Peligrosos". '</font></td>';
+                                          echo '<td style="text-align: center" id="gases">' . $clave . " PPM". '</td>';
+                                          $gasespeligrosos = $clave;
                                   break;
                                   case 'gasespeligrosos':
-                                      echo '<tr><td><font face="Helvetica">' . "Gases Peligrosos" . '</font></td>';
-                                      echo '<td style="text-align: center" id="gases">' . $clave . " PPM".  '</td>';
-                                      $gasespeligrosos = $clave;
+                                      echo '<tr><td><font face="Helvetica">' . "Calidad del Aire" . '</font></td>';
+                                      echo '<td style="text-align: center" id="calidad">' . $clave . " PPM".  '</td>';
+                                      $calidadaire = $clave;
                                   break;
+                                  
                                         }
                                     }
                                 }
@@ -197,13 +199,18 @@
                                 switch ($temperatura){
                                     case $temperatura <19:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Temperatura</td>';
-                                        echo '<td colspan = 1 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red "  id="reTemp">' . 'Menor a 23 ºC, cerrar ventanas' . '</font></td></tr>';
+                                        echo '<td colspan = 1 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red ">' . 'Menor a 23 ºC, cerrar ventanas y conectar radiadores' . '</font></td>';
+                                        echo '<p hidden id = "reTemp">Menor a 23 grados centígrados, cerrar ventanas y conectar radiadores</p>';
                                         break;
                                     case $temperatura > 25:
-                                        echo '<tr><td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red " id="reTemp">' . 'Mayor que 25 ºC, abrir ventanas' . '</font></td></tr>';
+                                        echo '<tr colspan =1 style="text-align: center" ><td>Temperatura</td>';
+                                        echo '<tr><td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red ">' . 'Mayor que 25 ºC, abrir ventanas y apagar radiadores' . '</font></td>';
+                                        echo '<p hidden id = "reTemp">Mayor que 25 grados centígrados, abrir ventanas y apagar radiadores</p>';
                                         break;
                                     default:
-                                        echo '<tr><td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=green " id="reTemp">' . 'Entre 23 ºC y 25 ºC, estado óptimo' . '</font></td></tr>';
+                                        echo '<tr colspan =1 style="text-align: center" ><td>Temperatura</td>';
+                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=green ">' . 'Entre 23 ºC y 25 ºC, estado óptimo' . '</font></td>';
+                                        echo '<p hidden id="reTemp"> Entre 23 y 25 grados centígrados, estado óptimo</p>';
                                         break;
                                 }
                                 switch ($humedad){
@@ -220,24 +227,56 @@
                                         break;
                                 }
 
-                                switch ($calidadaire){
-
+                                switch ($gasespeligrosos){
+                                    case $gasespeligrosos>=10 and $gasespeligrosos<50:
+                                        echo '<tr colspan =1 style="text-align: center" ><td>Gases Peligrosos</td>';
+                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=green " id="reGas">' . 'Ideales' . '</font></td></tr>';
+                                        break;
+                                    case $gasespeligrosos>=50 and $gasespeligrosos<200:
+                                        echo '<tr colspan =1 style="text-align: center" ><td>Gases Peligrosos</td>';
+                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=green " id="reGas">' . 'Recomendables' . '</font></td></tr>';
+                                        break;
+                                    case $gasespeligrosos>=200 and $gasespeligrosos<400:
+                                        echo '<tr colspan =1 style="text-align: center" ><td>Gases Peligrosos</td>';
+                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=yellow " id="reGas">' . 'Aceptables, ventilación opcional' . '</font></td></tr>';
+                                        break;
+                                    case $gasespeligrosos>=400 and $gasespeligrosos<1000:
+                                        echo '<tr colspan =1 style="text-align: center" ><td>Gases Peligrosos</td>';
+                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=yellow " id="reGas">' . 'Ventilacion sugerida' . '</font></td></tr>';
+                                        break;
+                                    case $gasespeligrosos>=1000 and $gasespeligrosos<2000:
+                                        echo '<tr colspan =1 style="text-align: center" ><td>Gases Peligrosos</td>';
+                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red " id="reGas">' . 'Ventilacion inmediata' . '</font></td></tr>';
+                                        break;
+                                    case $gasespeligrosos>=2000:
+                                        echo '<tr colspan =1 style="text-align: center" ><td>Gases Peligrosos</td>';
+                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red " id="reGas">' . 'Peligrosos' . '</font></td></tr>';
+                                        break;
                                 }
 
-                                switch ($gasespeligrosos){
-                                    
+                                switch ($calidadaire){
+                                    case $gasespeligrosos<=10 and $calidadaire<30:
+                                        echo '<tr colspan =1 style="text-align: center" ><td>Calidad del aire</td>';
+                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=green " id="reCal">' . 'Ideal' . '</font></td></tr>';
+                                        break;
+                                    case $calidadaire>=30 and $calidadaire<80:
+                                        echo '<tr colspan =1 style="text-align: center" ><td>Calidad del aire</td>';
+                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=green " id="reCal">' . 'Recomendable' . '</font></td></tr>';
+                                        break;
+                                    case $calidadaire>=80 and $calidadaire<150:
+                                        echo '<tr colspan =1 style="text-align: center" ><td>Calidad del aire</td>';
+                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=yellow " id="reCal">' . 'Aceptable, ventilación opcional' . '</font></td></tr>';
+                                        break;
+                                    case $calidadaire>=150 and $calidadaire<300:
+                                        echo '<tr colspan =1 style="text-align: center" ><td>Calidad del aire</td>';
+                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=yellow " id="reCal">' . 'Ventilacion sugerida' . '</font></td></tr>';
+                                        break;
+                                    case $calidadaire>=300:
+                                        echo '<tr colspan =1 style="text-align: center" ><td>Calidad del aire</td>';
+                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red " id="reCal">' . 'Peligrosa' . '</font></td></tr>';
+                                        break;
                                 }
                             }
-
-                                #if ($result->num_rows > 0) {
-                                #    while ($row = $result->fetch_assoc()) {
-                                #        echo '<tr>';
-                                #        for ($i = 0; $i < count($row); $i++) {
-                                #              $clave = $row[$columns[$i]];
-                                #                echo '<td style="text-align: right">' . $clave . '</td>';
-                                #        }
-                                #    }
-                                #}
                                         function selectCreator($filtros){
                                             $selectString = array();
                                             $newFiltros = explode(" ", $filtros);
