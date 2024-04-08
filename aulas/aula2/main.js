@@ -10,8 +10,8 @@ const api = {
   const temp = document.getElementById('temp');
   const weather = document.getElementById('weather');
   const range = document.getElementById('range');
-  const humidity = document.getElementById('humedad'); // Define el elemento
-  
+  const humidity = document.getElementById('humedad');
+  const wSpeed = document.getElementById('wSpeed'); // Define el elemento
   const imgFondo = document.getElementById('imagen-fondo');
 
   async function updateImage() {
@@ -20,7 +20,6 @@ const api = {
     );
     const data = await response.json();
     const temp = Math.round(data.main.temp - 273.15);
-  
     let src;
   
     switch (true) {
@@ -60,6 +59,9 @@ const api = {
       temp.innerHTML = `${toCelsius(data.main.temp)}c`;
       weather.innerHTML = data.weather[0].description;
       humidity.innerHTML = `humedad: ${data.main.humidity}%`;
+      wSpeed.innerHTML = `Velocidad: ${data.wind.speed} m/s `;
+      var velocidad = $data.wind.speed;
+      document.cookie='velocidad =' +velocidad;
       updateImages(data);
       
       // Mostrar la humedad en la tarjeta
