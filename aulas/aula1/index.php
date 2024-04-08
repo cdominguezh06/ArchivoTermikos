@@ -219,6 +219,14 @@
                                         echo '<tr><td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=green " id="reHum">' . 'Entre 45% y 60&, estado óptimo' . '</font></td></tr>';
                                         break;
                                 }
+
+                                switch ($calidadaire){
+
+                                }
+
+                                switch ($gasespeligrosos){
+                                    
+                                }
                             }
 
                                 #if ($result->num_rows > 0) {
