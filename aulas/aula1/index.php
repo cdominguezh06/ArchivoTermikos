@@ -226,7 +226,7 @@
                                         break;
                                 }
                                
-                               $tiempoVentilacion = round(138.6/(1.905 * 5 * 10));
+                               $tiempoVentilacion = round(48.4428/(0.9102 * 5 * 10));
                                 switch ($gasespeligrosos){
                                     case $gasespeligrosos<50:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Gases Peligrosos</td>';
