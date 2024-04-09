@@ -24,7 +24,7 @@ const api = {
   
     switch (true) {
       case temp < 10:
-        src = 'lluvia.jpg';
+        src = 'frio.jpg';
         break;
       case temp >= 10 && temp < 20:
         src = 'nubes.jpg';

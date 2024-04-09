@@ -100,7 +100,6 @@
                             <img src="images/temp-mid.png" class="temp-img" id="temp-img" />
                             <div class="temp" id="temp">14c</div>
                         </div>
-
                         <div class="humidity" id="humedad"> humedad</div>
                         <div class="weather" id="weather">Sol</div>
                     </div>

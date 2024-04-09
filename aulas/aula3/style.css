@@ -97,7 +97,7 @@ p {
 }
 .box{
   width: 30%;
-  height: 90%;
+  height: 100%;
   background: rgba(174, 177, 174, 0.541);
   text-align: center;
   border-radius: 25px;
