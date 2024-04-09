@@ -8,9 +8,10 @@ function decirCiudad(texto) {
   //Ciudad
   var ciudad = document.getElementById("city").textContent;
 //FECHA
-const fechaUser = document.getElementById("fecha").textContent;
+const fechaUser = document.getElementById("date").textContent;
 // Dividir la fecha y la hora
-const fecha = fechaUser.split(" ")[0];
+const fechaSplit = fechaUser.split("/");
+const fecha = [fechaSplit[1], fechaSplit[0], fechaSplit[2]];
 // Extraer solo el día de la fecha
 // Formatear la hora
 const fechaLegible = new Date(fecha).toLocaleDateString("es-ES");
