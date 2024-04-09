@@ -221,9 +221,9 @@
                                         echo '<tr><td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=green " id="reHum">' . 'Entre 45% y 60&, estado óptimo' . '</font></td></tr>';
                                         break;
                                 }
-
+                                $tiempoVentilacion = round(138.6/(1.905 * 5 * 10));
                                 switch ($gasespeligrosos){
-                                    case $gasespeligrosos>=10 and $gasespeligrosos<50:
+                                    case $gasespeligrosos<50:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Gases Peligrosos</td>';
                                         echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=green " id="reGas">' . 'Ideales.' . '</font></td></tr>';
                                         break;
@@ -233,16 +233,27 @@
                                         break;
                                     case $gasespeligrosos>=200 and $gasespeligrosos<400:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Gases Peligrosos</td>';
-                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=yellow " id="reGas">' . 'Aceptables, ventilación opcional</font></td></tr>';
+                                        if($tiempoVentilacion >1){
+                                            echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=yellow " id="reGas">' . 'Aceptables, ventilación opcional durante ' .$tiempoVentilacion. ' horas</font></td></tr>';
+                                        }else{
+                                            echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=yellow " id="reGas">' . 'Aceptables, ventilación opcional durante ' .$tiempoVentilacion. ' hora</font></td></tr>';
+                                        }
                                         break;
                                     case $gasespeligrosos>=400 and $gasespeligrosos<1000:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Gases Peligrosos</td>';
-                                        
-                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=yellow " id="reGas">' . 'Ventilacion sugerida</font></td></tr>';
+                                        if($tiempoVentilacion >1){
+                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=yellow " id="reGas">' . 'Ventilacion sugerida durante ' .$tiempoVentilacion. ' horas</font></td></tr>';
+                                        }else{
+                                            echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=yellow " id="reGas">' . 'Ventilacion sugerida durante ' .$tiempoVentilacion. ' hora</font></td></tr>';
+                                        }
                                         break;
                                     case $gasespeligrosos>=1000 and $gasespeligrosos<2000:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Gases Peligrosos</td>';
-                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red " id="reGas">' . 'Ventilacion inmediata</font></td></tr>';
+                                        if($tiempoVentilacion>1){
+                                            echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red " id="reGas">' . 'Ventilacion inmediata durante ' .$tiempoVentilacion. ' horas</font></td></tr>';
+                                        }else{
+                                            echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red " id="reGas">' . 'Ventilacion inmediata durante ' .$tiempoVentilacion. ' hora</font></td></tr>';
+                                        }
                                         break;
                                     case $gasespeligrosos>=2000:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Gases Peligrosos</td>';
@@ -251,7 +262,7 @@
                                 }
 
                                 switch ($calidadaire){
-                                    case $gasespeligrosos<=10 and $calidadaire<30:
+                                    case $calidadaire<30:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Calidad del aire</td>';
                                         echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=green " id="reCal">' . 'Ideal' . '</font></td></tr>';
                                         break;
