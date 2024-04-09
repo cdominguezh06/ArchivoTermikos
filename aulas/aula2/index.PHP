@@ -218,7 +218,7 @@
                                         echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red " id="reHum">' . 'Mayor que 60%, mucha humedad' . '</font></td></tr>';
                                         break;
                                     default:
-                                        echo '<tr><td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=green " id="reHum">' . 'Entre 45% y 60&, estado óptimo' . '</font></td></tr>';
+                                        echo '<tr><td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=green " id="reHum">' . 'Entre 45% y 60%, estado óptimo' . '</font></td></tr>';
                                         break;
                                 }
                                 $tiempoVentilacion = round(138.6/(1.905 * 5 * 10));
