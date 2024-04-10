@@ -192,8 +192,8 @@
                                 switch ($temperatura){
                                     case $temperatura <19:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Temperatura</td>';
-                                        echo '<td colspan = 1 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red ">' . 'Menor a 23 ºC, cerrar ventanas y conectar radiadores' . '</font></td>';
-                                        echo '<p hidden id = "reTemp">Menor a 23 grados centígrados, cerrar ventanas y conectar radiadores</p>';
+                                        echo '<td colspan = 1 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red ">' . 'Menor a 19 ºC, cerrar ventanas y conectar radiadores' . '</font></td>';
+                                        echo '<p hidden id = "reTemp">Menor a 19 grados centígrados, cerrar ventanas y conectar radiadores</p>';
                                         break;
                                     case $temperatura > 25:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Temperatura</td>';
@@ -202,8 +202,8 @@
                                         break;
                                     default:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Temperatura</td>';
-                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=green ">' . 'Entre 23 ºC y 25 ºC, estado óptimo' . '</font></td>';
-                                        echo '<p hidden id="reTemp"> Entre 23 y 25 grados centígrados, estado óptimo</p>';
+                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=green ">' . 'Entre 19 ºC y 25 ºC, estado óptimo' . '</font></td>';
+                                        echo '<p hidden id="reTemp"> Entre 19 y 25 grados centígrados, estado óptimo</p>';
                                         break;
                                 }
                                 switch ($humedad){
