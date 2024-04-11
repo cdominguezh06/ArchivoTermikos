@@ -234,7 +234,7 @@
                                         break;
                                     case $gasespeligrosos>=30 and $gasespeligrosos<80:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Gases Peligrosos</td>';
-                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=green " id="reGas">' . 'Recomendables' . '</font></td></tr>';
+                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=green " id="reGas">' . 'Valores normales' . '</font></td></tr>';
                                         break;
                                     case $gasespeligrosos>=80 and $gasespeligrosos<150:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Gases Peligrosos</td>';
@@ -281,7 +281,7 @@
                                         break;
                                     case $calidadaire>=2000:
                                         echo '<tr colspan =1 style="text-align: center" ><td>Calidad del aire</td>';
-                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red " id="reCal">' . 'Peligrosa' . '</font></td></tr>';
+                                        echo '<td colspan = 2 style="text-align: center"><font "face=Helvetica; font-size=14px; color=red " id="reCal">' . 'Peligrosa, ventilacion urgente' . '</font></td></tr>';
                                         break;
                                 }
                             }
